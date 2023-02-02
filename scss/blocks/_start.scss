@@ -1,0 +1,53 @@
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 25px;
+
+    &__title {
+        text-align: center;
+        font-family: 'Road Rage',
+            sans-serif;
+    }
+
+    &__button {
+        margin-top: 20px;
+        background-color: transparent;
+        padding: 1px;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        color: #5a3e20;
+        border: 2px solid #473018;
+        box-shadow: 0 0 3px #000,
+            inset 0 1px 5px -2px #fff;
+        transition: all 0.2s ease;
+
+        &:active {
+            box-shadow: 0 0 0px #955804,
+                inset 0 1px 0px -2px #fff;
+        }
+
+        i {
+            border-radius: 50%;
+        }
+    }
+
+    &__score {
+        font-family: 'Road Rage',
+            sans-serif;
+        margin-top: 15px;
+        font-size: 26px;
+    }
+
+}
+
+.big {
+    width: 70%;
+}

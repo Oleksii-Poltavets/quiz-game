@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+.quizz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/bg.jpg)center center/cover no-repeat;
+
+    &__inner {
+        background-color: #946333;
+        width: 50%;
+        min-height: 320px;
+        border-radius: 10px;
+        padding: 40px 50px 50px;
+        font-family: 'Road Rage',
+            sans-serif;
+        letter-spacing: 0.1cm;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid #473018;
+        box-shadow: 0 0 3px #000,
+            inset 0 1px 5px -2px #fff;
+        transition: all 0.5s ease;
+        position: relative;
+    }
+}
+
+.d-none {
+    display: none !important;
+}
+
+.wasRight {
+    border: 3px solid green!important;
+}
+
+
+
+// font-family: 'Roboto',sans-serif;
+
+// font-family: 'Yuji Boku', sans-serif;

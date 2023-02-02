@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz App</title>
+    <link type="./favicon.ico" href="/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,100;0,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main class="main">
+        <div class="quizz">
+            <div class="quizz__inner" id="inner">
+
+                <div class="start">
+                    <h1 class="start__title">World Capitals Quiz</h1>
+                    <p class="start__score">Your highiest score: <span id="highiest-score">___</span></p>
+                    <button class="start__button">
+                        <i class="fas fa-play-circle"></i>
+                    </button>
+                </div>
+
+                <div class="play">
+                    <div class="play__lifes">
+                        <div class="play__lifes-life">
+                            <i class="fas fa-heart life__full active"></i>
+                            <i class="far fa-heart life__empty"></i>
+                        </div>
+                        <div class="play__lifes-life">
+                            <i class="fas fa-heart life__full active"></i>
+                            <i class="far fa-heart life__empty"></i>
+                        </div>
+                        <div class="play__lifes-life">
+                            <i class="fas fa-heart life__full active"></i>
+                            <i class="far fa-heart life__empty"></i>
+                        </div>
+                    </div>
+
+                    <div class="points">
+                        Score: <div id="in-game-points">000</div>
+                    </div>
+
+                    <div class="burger" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="play__menu">
+
+                        <div class="play__menu-inner">
+                            <p class="play__menu-inner-item" data-type="restart">Restart</p>
+                            <p class="play__menu-inner-item" data-type="back">Back to game</p>
+                            <p class="play__menu-inner-item" data-type="quit">Quit</p>
+                        </div>
+
+                    </div>
+
+                    <div class="question">
+                        <p class="question__inner">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+
+                    <div class="variants">
+                        <p class="variant variant__a">
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="variant variant__b">
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="variant variant__c">
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="variant variant__d">
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal">
+                    <div class="modal-shure">
+                        <div class="modal__wrapper">
+                            <p class="modal__text">
+                                Are you shure?
+                            </p>
+                            <div class="modal__buttons">
+                                <button class="modal__buttons-button" data-type="yes">
+                                    Yes
+                                </button>
+                                <button class="modal__buttons-button" data-type="cancel">
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-end-score">
+                        <div class="modal__wrapper">
+                            <p class="modal__text">
+                                You reach <span id="after-game-points">___</span> points
+                            </p>
+                            <div class="modal__buttons">
+                                <a href="index.html" class="modal__buttons-button" data-button="home">
+                                    Ok
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>

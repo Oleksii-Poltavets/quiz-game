@@ -1,0 +1,192 @@
+.play {
+    display: none;
+    &__lifes {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: flex;
+        align-items: center;
+        &-life {
+            color: #a60f0f;
+            .life__full,
+            .life__empty {
+                display: none;
+            }
+            .life__full.active,
+            .life__empty.active {
+                display: block;
+            }
+        }
+    }
+
+    .points {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+    }
+
+    #in-game-points {
+        border: 2px dashed #000;
+        text-align: center;
+        padding: 0 3px 0 5px;
+    }
+
+    .burger {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        z-index: 11;
+        span {
+            display: block;
+            width: 24px;
+            height: 4px;
+            margin-bottom: 3px;
+            border-radius: 5px;
+            background-color: $buttonDark;
+            transition: all 0.3s ease;
+        }
+
+        &-active {
+            top: 20px;
+            span:nth-child(1) {
+                transform: rotate(45deg);
+                margin-bottom: -4px;
+                background-color: $text;
+            }
+
+            span:nth-child(2) {
+                display: none;
+            }
+
+            span:nth-child(3) {
+                transform: rotate(-45deg);
+                margin-top: -4px;
+                background-color: $text;
+            }
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(#47280F, 0.8);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        display: none;
+
+        &-active {
+            display: flex;
+        }
+
+        &-inner {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            &-item {
+                padding: 5px 10px;
+                font-family: 'Roboto',
+                    sans-serif;
+                border: 2px solid #473018;
+                box-shadow: 0 0 3px #000,
+                    inset 0 1px 5px -2px #fff;
+                font-size: 16px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                background-color: #473018;
+                cursor: pointer;
+                color: #946333;
+                transition: all 0.3s ease;
+                width: 100%;
+                max-width: 170px;
+                box-sizing: border-box;
+
+                &:hover {
+                    background-color: #47280F;
+                }
+
+                &:active {
+                    box-shadow: 0 0 0px #955804,
+                        inset 0 1px 0px -2px #fff;
+                }
+            }
+        }
+    }
+
+    .question {
+        text-align: center;
+        max-width: 70%;
+        margin: 0 auto;
+        font-size: 20px;
+        margin-bottom: 15px;
+
+        &__inner {
+            font-family: 'Roboto',
+                sans-serif;
+            color: $playFont;
+            font-size: 24px;
+        }
+    }
+
+    .variants {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .variant {
+            font-size: 22px;
+            font-family: 'Roboto', sans-serif;
+            border: 2px solid $border;
+            box-shadow: $shadow;
+            padding: 10px 15px;
+            width: 45%;
+            margin: 5px 0 5px;
+            border-radius: 10px;
+            color: $playFont;
+            cursor: pointer;
+            --animate-duration: 0.5s;
+
+            &:hover {
+                background-color: $button;
+                color: $text;
+            }
+
+            &:focus {
+                box-shadow: $shadowClick;
+            }
+
+            &:active {
+                box-shadow: $shadowClick;
+            }
+        }
+
+        .variant.wrong {
+            background-color: #a60f0f;
+            color: #fff;
+        }
+
+        .variant.right {
+            background-color: green;
+            color: #fff;
+        }
+    }
+}
+
+.play.active {
+    display: block;
+}

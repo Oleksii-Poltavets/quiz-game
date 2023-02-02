@@ -45,8 +45,10 @@ if(localStorage.getItem('score')) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('game') === 'inProgress') {
+    if (localStorage.getItem('reloaded') === 'true') {
         startTheGame();
+        gameInProcess ();
+        localStorage.removeItem('reloaded');
     }
 });
 
@@ -97,9 +99,11 @@ playMenu.addEventListener('click', (e) => {
         modalShure.classList.add('active');
         modalShure.addEventListener('click', (e) => {
             if (e.target.getAttribute('data-type') === 'yes') {
-                endTheGame();
-                startTheGame();
-                gameInProcess();
+                localStorage.setItem('reloaded', 'true');
+                location.reload();
+                // endTheGame();
+                // startTheGame();
+                // gameInProcess();
             } else if (e.target.getAttribute('data-type') === 'cancel') {
                 modal.classList.remove('active');
                 modalShure.classList.remove('active');

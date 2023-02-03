@@ -136,14 +136,19 @@ function gameInProcess () {
     showNewQuestion();
 
     boxOfVariants.addEventListener('click', (e) => {
-        let rn = getRandomNumber((inGameQuestions.length - 1));
-        localState.rn = rn;
-        if (e.target != boxOfVariants) {
+        if (!e.target.getAttribute('disabled') && e.target != boxOfVariants) {
+            variantsOfUnsvers.forEach(variant => variant.setAttribute('disabled', 'true'));
+            let rn = getRandomNumber((inGameQuestions.length - 1));
+            localState.rn = rn;
             checkIsAnsverRight(e);
             setTimeout(resetVariants, 1200);
             setTimeout(showNewQuestion, 1500);
         }
+        setTimeout(()=> {
+            variantsOfUnsvers.forEach(variant => variant.removeAttribute('disabled'));
+        }, 1500)
     });
+
     //game in a proces
     function showNewQuestion () {
         if (inGameQuestions.length <= 0 || localState.lives === -1) {
@@ -165,7 +170,7 @@ function gameInProcess () {
     //reset variants
     function resetVariants () {
         variantsOfUnsvers.forEach(variant => {
-            variant.classList.remove('right', 'wrong', 'animate__animated', 'animate__pulse', 'wasRight')
+            variant.classList.remove('right', 'wrong', 'animate__animated', 'animate__pulse', 'wasRight');
         })
     }
 

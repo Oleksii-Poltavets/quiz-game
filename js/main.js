@@ -253,7 +253,7 @@ const questions = [
     },
     {
         question: 'What is the capital of South Africa?',
-        unsver: 'Capetown',
+        unsver: 'Pretoria, Bloemfontein, and Cape Town',
         variants: [
             'Boston',
             'Morocco',
@@ -273,7 +273,7 @@ const questions = [
     },
     {
         question: 'What is the capital of Bulgaria?',
-        unsver: 'Nassau',
+        unsver: 'Sofia',
         variants: [
             'Sofia',
             'Reykjavik',
@@ -283,22 +283,12 @@ const questions = [
     },
     {
         question: 'What is the capital of Moldova?',
-        unsver: 'Dino',
+        unsver: 'Chișinău',
         variants: [
             'Bairiki, Ambo, and Betio',
             'Chișinău',
             `Saint George''s`,
             'Amsterdam'
-        ]
-    },
-    {
-        question: 'What is the capital of East Timor?',
-        unsver: 'Dili',
-        variants: [
-            'Panama City',
-            'Dili',
-            'Kigali',
-            'Rome'
         ]
     },
     {
